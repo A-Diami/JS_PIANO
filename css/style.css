@@ -1,0 +1,133 @@
+html{
+    background-color: black;
+    font-family: "forte";
+    text-align: center;
+}
+
+h1{
+    color:white ;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 1em;
+    text-align: center;
+}
+h2{
+    color:white ;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.17em;
+    text-align: center;
+}
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+
+header{
+    position: relative;
+    margin: 30px 0;
+}
+
+.now {
+    font-size: 120px;
+    line-height: 1;
+    color: #e67e22;
+    text-shadow: 0 0 5rem #95a5a6;
+    transition: all .07s ease;
+    min-height: 120px;
+}
+/* pour gerer les blocks */
+.keys{
+    display: block;
+    width: 100%;
+    height: 350px;
+    max-width: 880px;
+    position: relative;
+    margin: 40px auto 0;
+    cursor: none;
+}
+
+.key {
+    position: relative;
+    border: 5px solid black;
+    border-radius: .6rem;
+    transition: all .08s ease;
+    display: block;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.key:not(.sharp) {
+    float: left;
+    width: 10%;
+    height: 100%;
+    background: khaki;
+}
+
+.key.sharp {
+    position: absolute;
+    width: 6%;
+    height: 60%;
+    background: #000;
+    color: #eee;
+    top: 0;
+    z-index: 3;
+}
+
+.key[data-key="87"] {
+    left: 7%;
+}
+.key[data-key="69"] {
+    left: 17%;
+}
+
+.key[data-key="84"]  {
+    left: 37%;
+}
+
+.key[data-key="89"] {
+    left: 47%;
+}
+
+.key[data-key="85"] {
+    left: 57%;
+}
+
+.key[data-key="79"] {
+    left: 67%;
+}
+
+.key[data-key="80"] {
+    left: 77%;
+}
+
+.choix {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    bottom: 7px;
+    transition: opacity .3s ease-out;
+    font-size: 20px;
+}
+
+.keys:hover .choix {
+    opacity: 1;
+}
+
+.playing {
+    transform: scale(.95);
+    border-color: #028ae9;
+    box-shadow: 0 0 1rem #028ae9;
+}
+
+
+
